@@ -5,5 +5,13 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        return list(set([i for i in nums1+nums2 if i in nums1 and i in nums2]))
+        new=[]
+        for i in nums1+nums2:
+            if i in nums2:
+                if i in nums1:
+                    if i not in new:
+                        new.append(i)
         
+
+
+        return new
